@@ -1,0 +1,11 @@
+<h1>Books</h1>
+
+<ul>
+    <% @books.each do |book| %>
+        <li>
+            <h2><%= link_to book.title, book_path(book) %></h2>
+            <h4>By <%= book.author.first_name.capitalize %> <%= book.author.last_name.capitalize %></h4>
+            <h6><%= book.genre %> - <%= book.pub_year %></h6>
+        </li>
+    <% end %>
+</ul>

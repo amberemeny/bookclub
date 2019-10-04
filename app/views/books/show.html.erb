@@ -1,0 +1,14 @@
+<h2><%= @book.title %></h2>
+<h4>By <%= @book.author.first_name.capitalize %> <%= @book.author.last_name.capitalize %></h4>
+<h6><%= @book.genre %> - <%= @book.pub_year %></h6>
+<hr>
+<% if !@book.reviews.empty? %>
+    <h1>Reviews</h1>
+    <ul>
+        <% @book.reviews.each do |review| %>
+            <p>Rating: <%= review.rating %></p>
+            <p>Date: <%= review.date %></p>
+            <p><%= review.comment %></p>
+        <% end %>
+    </ul>
+<% end %>
