@@ -1,0 +1,7 @@
+<h1>All Enquiries</h1>
+
+<% @enquiries.each do |data| %>
+    <h3><%= data.name %></h3>
+    <h5>E: <%= data.email %> P: <%= data.email %><h5>
+    <p> Message: <%= data.message %></p>
+<% end %>
