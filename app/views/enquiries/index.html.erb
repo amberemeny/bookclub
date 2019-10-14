@@ -1,0 +1,8 @@
+<h1>All Enquiries (<%= @enquiries.count %>)</h1>
+
+<% @enquiries.each do |enquiry| %>
+    <h3><%= enquiry.name %></h3>
+    <h5>E: <%= enquiry.email %>   P: <%= enquiry.phone %></h5>
+    <p><%= enquiry.message %></p>
+    <hr>
+<% end %>
