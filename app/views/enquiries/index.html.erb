@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <h1>All Enquiries</h1>
 
 <% @enquiries.each do |data| %>
@@ -5,3 +6,13 @@
     <h5>E: <%= data.email %> P: <%= data.email %><h5>
     <p> Message: <%= data.message %></p>
 <% end %>
+=======
+<h1>All Enquiries (<%= @enquiries.count %>)</h1>
+
+<% @enquiries.each do |enquiry| %>
+    <h3><%= enquiry.name %></h3>
+    <h5>E: <%= enquiry.email %>   P: <%= enquiry.phone %></h5>
+    <p><%= enquiry.message %></p>
+    <hr>
+<% end %>
+>>>>>>> 45a365c924b14b7993ce0a846a35426a4ae21e2e
